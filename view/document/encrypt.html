@@ -52,7 +52,7 @@
 								</select>
 							</div>
 							<div class="layui-form-item layui-input-inline">
-								<button id="encode" class="pear-btn pear-btn-primary">Encode</button>
+								<button id="encode" class="layui-btn layui-btn-primary">Encode</button>
 							</div>
 						</form>
 					</div>
@@ -150,7 +150,7 @@
 						layer.msg("请选择加密方式",{icon:3,time:1000});
 					}
 
-					$("#end").append('<button class="pear-btn">加密方式 : ' + $("[value=" + $("[name='encode']")
+					$("#end").append('<button class="layui-btn">加密方式 : ' + $("[value=" + $("[name='encode']")
 							.val() + "]").text() + '&nbsp;&nbsp;&nbsp;&nbsp;明文 : ' + $("#enter").val() +
 						'&nbsp;&nbsp;&nbsp;&nbsp;加密结果 : ' + end + '</button><br><br>');
 				})

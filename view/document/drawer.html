@@ -38,10 +38,10 @@
 				<div class="layui-card">
 					<div class="layui-card-header">抽屉</div>
 					<div class="layui-card-body">
-						<button class="drawer-top pear-btn pear-btn-primary">上</button>
-						<button class="drawer-bottom pear-btn pear-btn-success">下</button>
-						<button class="drawer-left pear-btn pear-btn-warming">左</button>
-						<button class="drawer-right pear-btn pear-btn-danger">右</button>
+						<button class="drawer-top layui-btn layui-btn-primary">上</button>
+						<button class="drawer-bottom layui-btn layui-btn-success">下</button>
+						<button class="drawer-left layui-btn layui-btn-warming">左</button>
+						<button class="drawer-right layui-btn layui-btn-danger">右</button>
 					</div>
 				</div>
 			</div>
@@ -69,7 +69,7 @@
 				<div class="layui-card">
 					<div class="layui-card-header">进阶</div>
 					<div class="layui-card-body">
-						<button class="drawer-close-mask pear-btn pear-btn-primary">手动关闭</button>
+						<button class="drawer-close-mask layui-btn layui-btn-primary">手动关闭</button>
 					</div>
 				</div>
 			</div>
@@ -103,7 +103,7 @@
 				<div class="layui-card">
 					<div class="layui-card-header">扩展</div>
 					<div class="layui-card-body">
-						<button class="drawer-auto-close pear-btn pear-btn-success">自动关闭</button>
+						<button class="drawer-auto-close layui-btn layui-btn-success">自动关闭</button>
 					</div>
 				</div>
 			</div>
@@ -135,7 +135,7 @@
 				<div class="layui-card">
 					<div class="layui-card-header">扩展</div>
 					<div class="layui-card-body">
-						<button class="drawer-call-back pear-btn pear-btn-success">回调函数</button>
+						<button class="drawer-call-back layui-btn layui-btn-success">回调函数</button>
 					</div>
 				</div>
 			</div>
@@ -180,7 +180,7 @@
 								display: flex;
 								justify-content: space-around;
 								align-items: center">
-								<button id="targetDemo" class="pear-btn pear-btn-success">指定容器内打开</button>
+								<button id="targetDemo" class="layui-btn layui-btn-success">指定容器内打开</button>
 						</div>
 					</div>
 				</div>
@@ -213,14 +213,14 @@
 					<div class="layui-card-header">基于 layer 的抽屉扩展</div>
 					<div class="layui-card-body">
 						<p style="margin-bottom: 10px;">兼容原版 drawer 所有参数,要使用 layer 扩展,设置 legacy 选项为 false 即可</p>
-						<button id="layerDrawerLeft" class="pear-btn pear-btn-success">左</button>
-						<button id="layerDrawerRight" class="pear-btn pear-btn-success">右</button>
-						<button id="layerDrawerTop" class="pear-btn pear-btn-success">上</button>
-						<button id="layerDrawerBottom" class="pear-btn pear-btn-success">下</button>
-						<button id="layerDrawer" class="pear-btn pear-btn-success">更多参数示例</button>
-						<button id="layerDrawerParent" class="pear-btn pear-btn-success">父窗口打开</button>
-						<button id="layerDrawerIframe" class="pear-btn pear-btn-success">iframe远程页面</button>
-						<button id="layerDrawerURL" class="pear-btn pear-btn-success">URL远程页面</button>
+						<button id="layerDrawerLeft" class="layui-btn layui-btn-success">左</button>
+						<button id="layerDrawerRight" class="layui-btn layui-btn-success">右</button>
+						<button id="layerDrawerTop" class="layui-btn layui-btn-success">上</button>
+						<button id="layerDrawerBottom" class="layui-btn layui-btn-success">下</button>
+						<button id="layerDrawer" class="layui-btn layui-btn-success">更多参数示例</button>
+						<button id="layerDrawerParent" class="layui-btn layui-btn-success">父窗口打开</button>
+						<button id="layerDrawerIframe" class="layui-btn layui-btn-success">iframe远程页面</button>
+						<button id="layerDrawerURL" class="layui-btn layui-btn-success">URL远程页面</button>
 						<div
 							id="layertargetEl"
 							style="width: 600px;
@@ -233,7 +233,7 @@
 								display: flex;
 								justify-content: space-around;
 								align-items: center">
-								<button id="layertargetDemo" class="pear-btn pear-btn-success">指定容器内打开</button>
+								<button id="layertargetDemo" class="layui-btn layui-btn-success">指定容器内打开</button>
 						</div>
 						<blockquote class="layui-elem-quote layui-quote-nm">指定容器内打开，需使用 layer 捕获层模式，并设置目标容器 style="overflow: hidden;
 						position: relative;"</blockquote>
@@ -379,7 +379,7 @@
 				<h3>点击右侧灰色区域</h3>
 			</div>
 			<div class="layer-close-mask" style="display: none;">
-				<button id="btnClose" class="pear-btn pear-btn-primary"
+				<button id="btnClose" class="layui-btn layui-btn-primary"
 					style="position: absolute; bottom: 10px;left: 10px;">关闭抽屉</button>
 			</div>
 			<div class="layer-auto-close" style="display: none;">
