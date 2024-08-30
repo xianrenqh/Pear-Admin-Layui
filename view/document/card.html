@@ -19,11 +19,11 @@
 							<input type="text" name="username" id="username" placeholder="" class="layui-input">
 						</div>
 						<div class="layui-inline">
-							<button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="data-search-btn"><i class="layui-icon">&#xe615;</i>
+							<button type="submit" class="layui-btn" lay-submit lay-filter="data-search-btn"><i class="layui-icon">&#xe615;</i>
 								搜 索</button>
-							<button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="data-btn"><i class="layui-icon">&#xe615;</i>
+							<button type="submit" class="layui-btn" lay-submit lay-filter="data-btn"><i class="layui-icon">&#xe615;</i>
 								获取数据</button>
-							<button type="submit" class="layui-btn layui-btn-primary" lay-submit lay-filter="data-checked-btn"><i class="layui-icon">&#xe615;</i>
+							<button type="submit" class="layui-btn" lay-submit lay-filter="data-checked-btn"><i class="layui-icon">&#xe615;</i>
 								获取选中数据</button>
 						</div>
 					</div>
@@ -45,7 +45,7 @@
 				card.render({
 					elem: '#currentTableId',
 					url: '../../admin/data/card.json', // 接口数据
-					data: [], // 静态数据 
+					data: [], // 静态数据
 					page: true, // 是否分页
 					limit: 8, // 每页数量
 					linenum: 4, // 每行数量
@@ -53,7 +53,7 @@
 						console.log(data)
 					}
 				})
-				
+
 				// 监听搜索操作
 				form.on('submit(data-search-btn)', function(data) {
 					queryJson = data.field;

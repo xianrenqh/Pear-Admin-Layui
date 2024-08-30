@@ -9,7 +9,7 @@
 		<div class="layui-card">
 			<div class="layui-card-header"></div>
 			<div class="layui-card-body">
-				<button class="layui-btn layui-btn-primary add">新增 Demo</button>
+				<button class="layui-btn add">新增 Demo</button>
 				<button class="layui-btn layui-btn del">关闭 当前</button>
 			</div>
 		</div>
@@ -21,18 +21,18 @@
 			var $ = layui.jquery,
 				layer = layui.layer,
 				tab = layui.tab;
-				
+
 				$(".add").click(function(){
 					// ADD 添加方法
 					parent.layui.tab.addTabOnlyByElem('contents',{id:'demo',title:'Demo',url:'../system/space.html',close: true})
 				})
-				
+
 				$(".del").click(function(){
 					parent.layui.tab.delCurrentTabByElem('contents',function(id){
 						layer.msg("已删除 '"+id+"' 标签页")
 					});
 				})
-				
+
 		})
 	</script>
 </html>

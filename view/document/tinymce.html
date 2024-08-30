@@ -40,7 +40,7 @@
 					<div class="layui-card-body">
 						<textarea name="" id="edit" cols="30" rows="10"></textarea>
 						<div class="layui-btn-group" style="margin-top: 10px">
-							<button class="layui-btn layui-btn-primary" lay-event="getContent">获取内容</button>
+							<button class="layui-btn" lay-event="getContent">获取内容</button>
 						</div>
 					</div>
 				</div>
@@ -53,12 +53,12 @@
 							<pre class="layui-code" lay-encode="true">
 								layui.use(['tinymce'], function() {
 								    var tinymce = layui.tinymce
-								
+
 								    var edit = tinymce.render({
 								        elem: "#edit",
 								        height: 400
 								    });
-									
+
 								    edit.getContent()
 								});
 							</pre>
@@ -73,7 +73,7 @@
 			layui.use(['tinymce', 'util', 'layer','code','element'], function() {
 				var tinymce = layui.tinymce
 				var util = layui.util;
-				
+
 				layui.code();
 
 				var edit = tinymce.render({

@@ -60,6 +60,7 @@ layui.define(["jquery", "layer"], function (exports) {
     style += '.layui-form-checked span,.layui-form-checked:hover span {background-color: ' + color + ';}'
     style += '.layui-form-checked i,.layui-form-checked:hover i {color: ' + color + ';}'
     style += '.layui-form-onswitch { border-color: ' + color + '; background-color: ' + color + ';}'
+    style += '.layui-btn {  background-color: ' + color + ';}'
     style += '.layui-form-radio>i:hover, .layui-form-radioed>i {color: ' + color + ';}'
     style += '.layui-laypage .layui-laypage-curr .layui-laypage-em{background-color:' + color + '!important}'
     style += '.layui-tab-brief>.layui-tab-more li.layui-this:after, .layui-tab-brief>.layui-tab-title .layui-this:after{border-bottom: 3px solid ' + color + '!important}'

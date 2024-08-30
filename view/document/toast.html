@@ -54,7 +54,7 @@
 								<br>
 								<br>
 							</div>
-							<button class="toast-info layui-btn layui-btn-primary">通用消息</button>
+							<button class="toast-info layui-btn">通用消息</button>
 							<button class="toast-success layui-btn layui-btn-success">成功消息</button>
 							<button class="toast-failure layui-btn layui-btn-danger">错误消息</button>
 							<button class="toast-warning layui-btn layui-btn-warming">警告消息</button>
@@ -70,15 +70,15 @@
 								<pre class="layui-code" lay-encode="true">
 									layui.use(['toast', 'jquery', 'layer', 'code'], function() {
 									    var toast = layui.toast;
-										                         
+
 									    toast.success({title: 'Caution',message: 'You forgot important data',position: 'topRight'});
-									    
+
 										toast.info({title: 'Caution',message: 'You forgot important data',position: 'topRight'});
-									    
+
 										toast.warning({title: 'Caution',message: 'You forgot important data',position: 'topRight'});
-									    
+
 										toast.error({title: 'Caution',message: 'You forgot important data',position: 'topRight'});
-									    
+
 										toast.question({title: 'Caution',message: 'You forgot important data',position: 'topRight'});
 									})
 								</pre>
@@ -109,7 +109,7 @@
 								<pre class="layui-code" lay-encode="true">
 									layui.use(['toast', 'jquery', 'layer', 'code'], function() {
 									    var toast = layui.toast;
-										                         
+
 									    $(".toast-top-left-btn").click(function(){
 									        toast.success({title: 'Caution',message: 'You forgot important data',position: 'topLeft'});
 									    })
@@ -152,7 +152,7 @@
 								<pre class="layui-code" lay-encode="true">
 									layui.use(['toast', 'jquery', 'layer', 'code'], function() {
 									    var toast = layui.toast;
-										                         
+
 									    toast.destroy();
 									})
 								</pre>
@@ -236,7 +236,7 @@
 					position: 'topRight'
 				});
 			})
-			
+
 			$(".toast-top-left-btn").click(function(){
 				toast.info({
 					title: 'Caution',
@@ -258,7 +258,7 @@
 					position: 'topRight'
 				});
 			})
-			
+
 			$(".toast-bottom-left-btn").click(function(){
 				toast.info({
 					title: 'Caution',
@@ -280,7 +280,7 @@
 					position: 'bottomRight'
 				});
 			})
-			
+
 			$("#closeAll").click(function() {
 				toast.destroy();
 			});

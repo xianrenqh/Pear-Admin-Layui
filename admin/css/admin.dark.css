@@ -203,10 +203,10 @@
 }
 
 /** switch */
-.pear-admin-dark .layui-form-switch {
+/*.pear-admin-dark .layui-form-switch {
     border-color: #484849;
     background-color: rgba(255, 255, 255, .08);
-}
+}*/
 
 /** table */
 .pear-admin-dark .layui-table {

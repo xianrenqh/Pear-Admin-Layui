@@ -85,7 +85,7 @@
 						<div class="layui-colla-content">
 							<pre class="layui-code" lay-encode="true">
 								tag.add('demo', {text: '新选项',id: 12})
-								 
+
 								tag.delete('demo', '44');
 							</pre>
 						</div>
@@ -150,10 +150,10 @@
 								    <button lay-id="33" type="button" class="tag-item tag-item-danger">权限分配</button>
 								    <button lay-id="44" type="button" class="tag-item tag-item-danger">商品管理</button>
 								</div>
-								  
+
 								tag.on('delete(demo)', function(data) {
 								    console.log('删除');
-								    console.log(this); 
+								    console.log(this);
 								    console.log(data.index);
 								    console.log(data.elem);
 								    console.log(data.othis);
@@ -188,12 +188,12 @@
 							    <button lay-id="33" type="button" class="tag-item">权限分配</button>
 							    <button lay-id="44" type="button" class="tag-item">商品管理</button>
 							</div>
-							  
+
 							tag.on('add(demo)', function(data) {
 							    console.log('新建');
-							    console.log(this); 
-							    console.log(data.index); 
-							    console.log(data.elem); 
+							    console.log(this);
+							    console.log(data.index);
+							    console.log(data.elem);
 							});
 							</pre>
 						</div>
@@ -211,7 +211,7 @@
 				layui.code();
 
 				tag.render("test", {
-					skin: 'layui-btn layui-btn-primary layui-btn-sm layui-btn-radius', //标签样式
+					skin: 'layui-btn layui-btn-sm layui-btn-radius', //标签样式
 					tagText: '<i class="layui-icon layui-icon-add-1"></i>添加标签' //标签添加按钮提示文本
 				});
 

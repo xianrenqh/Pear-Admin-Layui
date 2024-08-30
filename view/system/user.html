@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>用户管理</title>
 		<link rel="stylesheet" href="../../component/pear/css/pear.css" />
+        <link rel="stylesheet" href="/admin/css/reset.css" />
 		<link id="layui-theme-dark-css" rel="stylesheet">
 		<link id="xm-select-dark-css" rel="stylesheet">
 	</head>
@@ -31,11 +32,11 @@
 							</div>
 						</div>
 						<div class="layui-form-item layui-inline">
-							<button class="layui-btn layui-btn-md layui-btn-primary" lay-submit lay-filter="user-query">
+							<button class="layui-btn layui-btn-md layui-bg-blue" lay-submit lay-filter="user-query">
 								<i class="layui-icon layui-icon-search"></i>
 								查询
 							</button>
-							<button type="reset" class="layui-btn layui-btn-md">
+							<button type="reset" class="layui-btn layui-btn-md layui-btn-primary">
 								<i class="layui-icon layui-icon-refresh"></i>
 								重置
 							</button>
@@ -51,7 +52,7 @@
 		</div>
 
 		<script type="text/html" id="user-toolbar">
-			<button class="layui-btn layui-btn-primary layui-btn-md" lay-event="add">
+			<button class="layui-btn layui-btn-md" lay-event="add">
 		        <i class="layui-icon layui-icon-add-1"></i>
 		        新增
 		    </button>
@@ -62,7 +63,7 @@
 		</script>
 
 		<script type="text/html" id="user-bar">
-			<button class="layui-btn layui-btn-primary layui-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
+			<button class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
 		    <button class="layui-btn layui-btn-danger layui-btn-sm" lay-event="remove"><i class="layui-icon layui-icon-delete"></i></button>
 		</script>
 
@@ -250,9 +251,9 @@
 				}
 
 				window.batchRemove = function(obj) {
-					
+
 					var checkIds = common.checkField(obj,'userId');
-					
+
 					if (checkIds === "") {
 						layer.msg("未选中数据", {
 							icon: 3,
@@ -260,7 +261,7 @@
 						});
 						return false;
 					}
-					
+
 					layer.confirm('确定要删除这些用户', {
 						icon: 3,
 						title: '提示'

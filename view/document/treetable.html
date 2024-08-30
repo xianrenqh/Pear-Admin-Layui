@@ -14,7 +14,7 @@
                 <div class="layui-input-inline">
                     <input type="text" name="keyword" placeholder="" class="layui-input">
                 </div>
-                <button class="layui-btn layui-btn-md layui-btn-primary" lay-submit lay-filter="power-query">
+                <button class="layui-btn layui-btn-md layui-bg-blue" lay-submit lay-filter="power-query">
                     <i class="layui-icon layui-icon-search"></i>
                     查询
                 </button>
@@ -34,7 +34,7 @@
 </div>
 
 <script type="text/html" id="power-toolbar">
-    <button class="layui-btn layui-btn-primary layui-btn-md" lay-event="add">
+    <button class="layui-btn layui-btn-md" lay-event="add">
         <i class="layui-icon layui-icon-add-1"></i>
         新增
     </button>
@@ -57,7 +57,7 @@
 </script>
 
 <script type="text/html" id="power-bar">
-    <button class="layui-btn layui-btn-primary layui-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
+    <button class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon layui-icon-edit"></i></button>
     <button class="layui-btn layui-btn-danger layui-btn-sm" lay-event="remove"><i class="layui-icon layui-icon-delete"></i></button>
 </script>
 
@@ -137,13 +137,13 @@
 				 treetable.reload("#power-table");
 			}
         });
-		
+
 		form.on('submit(power-query)', function(data) {
             var keyword = data.field.keyword;
             treetable.search('#power-table',keyword);
             return false;
 		});
-	
+
         window.add = function(){
             layer.open({
                 type: 2,
@@ -163,7 +163,7 @@
                 content: MODULE_PATH + 'edit.html'
             });
         }
-		
+
         window.remove = function(obj){
             layer.confirm('确定要删除该权限', {icon: 3, title:'提示'}, function(index){
                 layer.close(index);
@@ -185,7 +185,7 @@
                 })
             });
         }
-		
+
 		window.batchRemove = function(obj) {
 			let data = table.checkStatus(obj.config.id).data;
 			if (data.length === 0) {

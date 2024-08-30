@@ -37,7 +37,7 @@
 						常用操作
 					</div>
 					<div class="layui-card-body">
-						<button class="layui-btn layui-btn-primary add">新增 Demo</button>
+						<button class="layui-btn add">新增 Demo</button>
 						<button class="layui-btn layui-btn-danger del">删除当前</button>
 						<button class="layui-btn layui-btn-warming enable">高级操作</button>
 					</div>
@@ -60,7 +60,7 @@
 						<h2 class="layui-colla-title">显示代码</h2>
 						<div class="layui-colla-content layui-show">
 							<pre class="layui-code" lay-encode="true">
-								
+
 								tab.render({
 								    elem: 'contents',
 								    roll: false,
@@ -70,7 +70,7 @@
 								    index: 0,
 								    tabMax: 30,
 								    closeEvent: function(id) {
-										
+
 								        // do something
 								    },
 								    data: [{
@@ -85,8 +85,8 @@
 								        close: false
 								    }]
 								});
-								
-								
+
+
 						</pre>
 						</div>
 					</div>
@@ -125,25 +125,25 @@
 						close: false
 					}]
 				});
-				
+
 				$(".add").click(function(){
-					
+
 					// ADD 添加方法
 					tab.addTabOnlyByElem('contents',{id:'demo',title:'Demo',url:'../system/space.html',close: true})
 				})
-				
+
 				$(".enable").click(function(){
-					
+
 					// ADD 添加方法
 					tab.addTabOnlyByElem('contents',{id:'tabContent',title:'高级操作',url:'tabContent.html',close: true})
 				})
-				
+
 				$(".del").click(function(){
-					
+
 					tab.delCurrentTabByElem('contents',function(id){
 						layer.msg("已删除 '"+id+"' 标签页")
 					});
-					
+
 				})
 			});
 		</script>
