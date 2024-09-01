@@ -5,20 +5,6 @@ layui.define(["jquery", "layer"], function (exports) {
   var theme = {};
   theme.autoHead = false;
 
-  theme.changeDark = function(target, autoHead){
-    var dark = localStorage.getItem("dark");
-    var $pearAdmin = $(".pear-admin");
-    $pearAdmin.removeClass("pear-admin-dark");
-    if (dark === true || dark === "true") {
-      $pearAdmin.addClass("pear-admin-dark");
-      document.getElementById('layui-theme-dark-css').setAttribute('href', '/admin/css/layui-theme-dark.css')
-      document.getElementById('xm-select-dark-css').setAttribute('href', '/admin/css/xm-select-dark.css')
-    } else {
-      document.getElementById('layui-theme-dark-css').removeAttribute('href')
-      document.getElementById('xm-select-dark-css').removeAttribute('href')
-    }
-  }
-
   theme.changeTheme = function (target, autoHead) {
     this.autoHead = autoHead;
     var color = localStorage.getItem("theme-color-color");
@@ -110,6 +96,42 @@ layui.define(["jquery", "layer"], function (exports) {
     } else {
       $("head").append("<style id='pear-admin-color'>" + style + "</style>")
     }
+  }
+
+  theme.changeDark = function (target, autoHead) {
+    var dark = localStorage.getItem("dark");
+    this.darkSet(dark);
+    if (target.frames.length == 0) return;
+    for (var i = 0; i < target.frames.length; i++) {
+      try {
+        if (target.frames[i].layui == undefined) continue;
+        target.frames[i].layui.theme.changeDark(target.frames[i], autoHead);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  }
+
+  theme.darkSet = function (dark) {
+    var $pearAdmin = $(".pear-admin");
+    $pearAdmin.removeClass("pear-admin-dark");
+    if ($('link#layui-theme-dark-css').length > 0) {
+      if (dark === true || dark === "true") {
+        $pearAdmin.addClass("pear-admin-dark");
+        document.getElementById('layui-theme-dark-css').setAttribute('href', '/admin/css/layui-theme-dark.css')
+      } else {
+        document.getElementById('layui-theme-dark-css').removeAttribute('href')
+      }
+    }
+    if ($('link#xm-select-dark-css').length > 0) {
+      if (dark === true || dark === "true") {
+        $pearAdmin.addClass("pear-admin-dark");
+        document.getElementById('xm-select-dark-css').setAttribute('href', '/admin/css/xm-select-dark.css')
+      } else {
+        document.getElementById('xm-select-dark-css').removeAttribute('href')
+      }
+    }
+
   }
 
   exports(MOD_NAME, theme);

@@ -3,6 +3,7 @@ body,
 .layui-layout {
 	height: 100%;
 }
+html,body{background: whitesmoke}
 
 .pear-admin .layui-header,
 .pear-admin .layui-body,

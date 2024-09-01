@@ -251,15 +251,6 @@ layui.define(['message', 'table', 'jquery', 'element', 'yaml', 'form', 'tab', 'm
           }
         }
 
-        let dark = localStorage.getItem("dark");
-        if (dark === null) {
-          dark = option.other.dark;
-        } else {
-          if (option.theme.allowCustom === false) {
-            dark = option.other.dark;
-          }
-        }
-
         localStorage.setItem("muilt-tab", muiltTab);
         localStorage.setItem("theme-banner", banner);
         localStorage.setItem("theme-menu", menu);
@@ -267,12 +258,11 @@ layui.define(['message', 'table', 'jquery', 'element', 'yaml', 'form', 'tab', 'm
         localStorage.setItem("auto-head", autoHead);
         localStorage.setItem("control", control);
         localStorage.setItem("footer", footer);
-        localStorage.setItem("dark", dark);
+
         this.menuSkin(menu);
         this.headerSkin(header);
         this.bannerSkin(banner);
         this.footer(footer);
-        this.dark(dark);
       }
 
       this.footer = function (footer) {
@@ -284,19 +274,6 @@ layui.define(['message', 'table', 'jquery', 'element', 'yaml', 'form', 'tab', 'm
         } else {
           footerDOM.addClass("close");
           bodyDOM.css("bottom", "");
-        }
-      }
-
-      this.dark = function (dark) {
-        var $pearAdmin = $(".pear-admin");
-        $pearAdmin.removeClass("pear-admin-dark");
-        if (dark === true || dark === "true") {
-          $pearAdmin.addClass("pear-admin-dark");
-          document.getElementById('layui-theme-dark-css').setAttribute('href', '/admin/css/layui-theme-dark.css')
-          document.getElementById('xm-select-dark-css').setAttribute('href', '/admin/css/xm-select-dark.css')
-        } else {
-          document.getElementById('layui-theme-dark-css').removeAttribute('href')
-          document.getElementById('xm-select-dark-css').removeAttribute('href')
         }
       }
 
@@ -842,7 +819,8 @@ layui.define(['message', 'table', 'jquery', 'element', 'yaml', 'form', 'tab', 'm
 
           form.on('switch(dark)', function (data) {
             localStorage.setItem("dark", this.checked);
-            pearAdmin.dark(this.checked);
+            pearTheme.changeDark(window, false)
+            //pearAdmin.dark(this.checked);
           })
 
           if (localStorage.getItem('theme-banner') === 'true') {

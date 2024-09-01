@@ -47,6 +47,6 @@ layui.config({
   fullscreen: "fullscreen",     //全屏组件
   popover: "popover/popover"    //汽泡组件
 }).use(['layer', 'theme', 'admin'], function () {
-  layui.theme.changeDark(window, false);
   layui.theme.changeTheme(window, false);
+  layui.theme.changeDark(window, false)
 });
